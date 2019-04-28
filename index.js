@@ -1,7 +1,7 @@
 var midi = require('midi');
 
 // Set up a new input.
-var input = new midi.input();
+var input;
 
 // Count the available input ports.
 let deviceName	= 'WORLDE easy pad';
@@ -17,6 +17,8 @@ let CONTROL_RECORD = 44;
 let CONTROL_STOP = 46;
 let CONTROL_PLAY = 45;
 
+let EVENT_OPEN = 'open';
+let EVENT_CLOSE = 'close';
 let EVENT_PAD_DOWN  = 'pad down';
 let EVENT_PAD_UP  = 'pad up';
 let EVENT_BUTTON_DOWN  = 'button down';
@@ -34,6 +36,7 @@ var _eventListeners = {};
 
 function open()
 {
+    input = new midi.input();
     var length = input.getPortCount();
     var deviceIndex	= -1;
     for(var i=0; i<length; i++)
@@ -51,6 +54,8 @@ function open()
 
     	// Open the first available input port.
     	input.openPort(deviceIndex);
+        
+        dispatchEvent(EVENT_OPEN);
 
     	// Sysex, timing, and active sensing messages are ignored
     	// by default. To enable these message types, pass false for
@@ -142,6 +147,8 @@ function close()
 {
 	// Close the port when done.
 	input.closePort();
+    
+    dispatchEvent(EVENT_CLOSE);
 }
 
 

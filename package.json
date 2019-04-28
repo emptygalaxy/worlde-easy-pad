@@ -1,6 +1,6 @@
 {
   "name": "worlde-easy-pad",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Node controller for WORLDE easy pad midi controller",
   "main": "index.js",
   "scripts": {
@@ -11,13 +11,13 @@
     "url": "git+ssh://git@github.com/emptygalaxy/worlde-easy-pad.git"
   },
   "keywords": [
-    "worlde", "midi", "controller"
+    "worlde", "worlde easy pad", "midi", "controller"
   ],
   "author": "Nick Timman <info@emptygalaxy.com> (https://emptygalaxy.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/emptygalaxy/nodeworlde-easy-pad/issues"
+    "url": "https://github.com/emptygalaxy/worlde-easy-pad/issues"
   },
-  "homepage": "https://github.com/emptygalaxy/nodeworlde-easy-pad#readme",
+  "homepage": "https://github.com/emptygalaxy/worlde-easy-pad#readme",
   "dependencies": {"midi": "*"}
 }
