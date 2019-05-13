@@ -11,7 +11,10 @@
     "url": "git+ssh://git@github.com/emptygalaxy/worlde-easy-pad.git"
   },
   "keywords": [
-    "worlde", "worlde easy pad", "midi", "controller"
+    "worlde",
+    "worlde easy pad",
+    "midi",
+    "controller"
   ],
   "author": "Nick Timman <info@emptygalaxy.com> (https://emptygalaxy.com)",
   "license": "ISC",
@@ -19,5 +22,7 @@
     "url": "https://github.com/emptygalaxy/worlde-easy-pad/issues"
   },
   "homepage": "https://github.com/emptygalaxy/worlde-easy-pad#readme",
-  "dependencies": {"midi": "*"}
+  "dependencies": {
+    "midi": "*"
+  }
 }
